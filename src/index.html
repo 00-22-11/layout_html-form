@@ -12,9 +12,11 @@
   </head>
   <body>
     <script type="text/javascript" src="./main.js"></script>
-    <form action="">
+    <form action="" onsubmit="onSubmit()">
       <fieldset class="first-field">
-        <legend>Personal information</legend>
+        <legend>
+          Personal information
+        </legend>
         <div class="form-field">
           <label for="surname">
             Surname:
@@ -25,6 +27,7 @@
             name="surname"
             id="surname"
             autocomplete="off"
+            required
           >
         </div>
         <div class="form-field">
@@ -37,6 +40,7 @@
             name="name"
             id="name"
             autocomplete="off"
+            required
           >
         </div>
         <div class="form-field">
@@ -68,7 +72,8 @@
           <label for="term-and-agreement">
             I accept the term of the agreement
           </label>
-          <input class="form-input"
+          <input
+            class="form-input"
             type="checkbox"
             name="username"
             id="term-and-agreement"
@@ -76,10 +81,10 @@
           >
         </div>
       </fieldset>
-    </form>
-    <form action="" onsubmit="onSubmit()">
       <fieldset class="second-field">
-        <legend>Registration</legend>
+        <legend>
+          Registration
+        </legend>
         <div class="form-field">
           <label for="email">
             E-mail:
@@ -102,16 +107,20 @@
             type="password"
             name="password"
             id="password"
+            minlength="8"
+            maxlength="26"
             required
           >
         </div>
       </fieldset>
-    </form>
-    <form action="" onsubmit="onSubmit()">
       <fieldset class="third-field">
-        <legend>An interesting fact about you!</legend>
+        <legend>
+          An interesting fact about you!
+        </legend>
         <div class="form-field">
-          Do you love cats?
+          <label for="yes">
+            Do you love cats?
+          </label>>
           <input
             class="form-input"
             type="radio"
@@ -163,9 +172,15 @@
             What are your favorite brand of cars?
           </label>
           <select id="bed" multiple>
-            <option value="bmw">BMW</option>
-            <option value="audi">Audi</option>
-            <option value="lada">Lada</option>
+            <option value="bmw">
+              BMW
+            </option>
+            <option value="audi">
+              Audi
+            </option>
+            <option value="lada">
+              Lada
+            </option>
           </select>
         </div>
         <div class="form-field">
@@ -181,10 +196,10 @@
           >
         </div>
       </fieldset>
-    </form>
-    <form action="" onsubmit="onSubmit()">
       <fieldset class="forth-field">
-        <legend>Additional info</legend>
+        <legend>
+          Additional info
+        </legend>
         <div class="form-field">
           <label for="textarea">
             Comments:
@@ -194,6 +209,7 @@
             id="textarea"
             cols="20"
             rows="2"
+            maxlength="120"
           >
           </textarea>
         </div>
@@ -202,12 +218,18 @@
             Would you recommend us?
           </label>
           <select name="recommend" id="recommend">
-            <option value="yes">yes</option>
-            <option value="no">no</option>
+            <option value="yes">
+              yes
+            </option>
+            <option value="no">
+              no
+            </option>
           </select>
         </div>
       </fieldset>
+      <button type="submit" name="buttom">
+        Submit
+      </button>
     </form>
-    <button type="submit" name="buttom">Submit</button>
   </body>
 </html>
